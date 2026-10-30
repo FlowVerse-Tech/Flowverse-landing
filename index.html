@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Flowverse — Helping Local Businesses Be Found, and Booked | TimeToU</title>
+  <meta name="description" content="Flowverse builds simple, elegant digital tools for local service businesses, starting with TimeToU: an AI-enabled aggregator and appointment platform for Chennai salons.">
+  <meta name="author" content="Flowverse Tech (OPC) Private Limited">
+  
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://flowverse-tech.com">
+  <meta property="og:title" content="Flowverse — Helping Local Businesses Be Found, and Booked">
+  <meta property="og:description" content="Simple digital tools for local service businesses in Chennai, starting with TimeToU.">
+  <meta property="og:image" content="assets/flowverse-full.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="alternate icon" type="image/png" href="favicon.png">
+
+  <!-- Google Fonts: Plus Jakarta Sans (300, 400, 500, 600, 700) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Accessible Skip Link -->
+  <a href="#hero" class="skip-link">Skip to main content</a>
+
+  <!-- Top Scroll Progress Bar -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Desktop Pointer Spotlight Glow -->
+  <div id="cursor-glow" aria-hidden="true"></div>
+
+  <!-- Ambient Blurred Glow Orbs (Subtle background motion) -->
+  <div class="ambient-container" aria-hidden="true">
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+    <div class="ambient-orb orb-3"></div>
+  </div>
+
+  <!-- ==========================================================================
+       PAGE LOAD INTRO (Gentle reveal with F mark pulse & circuit lines)
+       ========================================================================== -->
+  <div id="loading-screen" aria-hidden="true">
+    <div class="loading-f-wrapper">
+      <svg class="loading-svg-f" viewBox="0 0 120 120" width="90" height="90">
+        <defs>
+          <linearGradient id="load-f-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#27C4FF" />
+            <stop offset="50%" stop-color="#2D7BFF" />
+            <stop offset="100%" stop-color="#7A4DFF" />
+          </linearGradient>
+          <radialGradient id="load-glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#27C4FF" stop-opacity="0.4" />
+            <stop offset="100%" stop-color="#050A1F" stop-opacity="0" />
+          </radialGradient>
+        </defs>
+        <circle cx="60" cy="60" r="50" fill="url(#load-glow)" />
+        <path class="line-draw" d="M 32 46 A 34 34 0 0 1 88 40" fill="none" stroke="#2D7BFF" stroke-width="2" stroke-linecap="round" />
+        <circle cx="88" cy="40" r="3" fill="#27C4FF" />
+        <path class="line-draw" d="M 88 74 A 36 36 0 0 1 34 82" fill="none" stroke="#2D7BFF" stroke-width="2" stroke-linecap="round" />
+        <circle cx="34" cy="82" r="3" fill="#7A4DFF" />
+        <path d="M 42 36 C 52 35 72 32 92 34 C 84 41 72 45 52 46 C 45 46 42 42 42 36 Z" fill="#27C4FF" />
+        <path d="M 46 54 C 58 53 74 52 86 55 C 78 61 66 64 50 64 C 47 64 45 60 46 54 Z" fill="#2D7BFF" />
+        <path d="M 44 36 C 54 36 50 48 48 60 C 46 72 42 86 28 92 C 34 86 38 78 38 68 C 38 52 38 42 44 36 Z" fill="url(#load-f-grad)" />
+      </svg>
+    </div>
+    <div class="loading-wordmark">Flowverse</div>
+  </div>
+
+  <!-- ==========================================================================
+       DESKTOP RIGHT-EDGE SCROLL INDICATOR
+       ========================================================================== -->
+  <nav class="scroll-indicator-nav" aria-label="Section navigation">
+    <a href="#hero" class="scroll-dot-link active" data-label="Home" aria-label="Go to Home section"></a>
+    <a href="#problem" class="scroll-dot-link" data-label="Problem" aria-label="Go to Problem section"></a>
+    <a href="#timetou" class="scroll-dot-link" data-label="TimeToU" aria-label="Go to TimeToU section"></a>
+    <a href="#how-it-works" class="scroll-dot-link" data-label="How it works" aria-label="Go to How it works section"></a>
+    <a href="#features" class="scroll-dot-link" data-label="Features" aria-label="Go to Features section"></a>
+    <a href="#roadmap" class="scroll-dot-link" data-label="Roadmap" aria-label="Go to Roadmap section"></a>
+    <a href="#contact" class="scroll-dot-link" data-label="Contact" aria-label="Go to Contact section"></a>
+    <a href="#about" class="scroll-dot-link" data-label="About us" aria-label="Go to About us section"></a>
+  </nav>
+
+  <!-- ==========================================================================
+       1. STICKY NAVIGATION
+       ========================================================================== -->
+  <header class="site-nav" id="site-nav">
+    <div class="container nav-container">
+      <!-- Compact Flowverse Logo (F mark + wordmark) on the left -->
+      <a href="#hero" class="nav-brand" aria-label="Flowverse Home">
+        <img src="assets/flowverse-compact-transparent.png" alt="Flowverse Tech" class="nav-logo-compact" width="130" height="38">
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu-wrapper" aria-label="Primary navigation">
+        <ul class="nav-menu">
+          <li><a href="#problem" class="nav-link">Problem</a></li>
+          <li><a href="#timetou" class="nav-link">TimeToU</a></li>
+          <li><a href="#how-it-works" class="nav-link">How it works</a></li>
+          <li><a href="#roadmap" class="nav-link">Roadmap</a></li>
+          <li><a href="#about" class="nav-link">About us</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Button -->
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-primary btn-pill-sm">
+          <span>Join early</span>
+          <svg class="btn-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="10" x2="15" y2="10"></line>
+            <polyline points="10 5 15 10 10 15"></polyline>
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Toggle navigation menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <ul class="mobile-nav-list">
+      <li><a href="#problem" class="mobile-nav-link">Problem</a></li>
+      <li><a href="#timetou" class="mobile-nav-link">TimeToU</a></li>
+      <li><a href="#how-it-works" class="mobile-nav-link">How it works</a></li>
+      <li><a href="#features" class="mobile-nav-link">Features</a></li>
+      <li><a href="#roadmap" class="mobile-nav-link">Roadmap</a></li>
+      <li><a href="#about" class="mobile-nav-link">About us</a></li>
+    </ul>
+
+    <a href="#contact" class="btn btn-primary" style="width: 100%; justify-content: center;">
+      <span>Join as an early provider</span>
+      <svg class="btn-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="5" y1="10" x2="15" y2="10"></line>
+        <polyline points="10 5 15 10 10 15"></polyline>
+      </svg>
+    </a>
+
+    <div class="mobile-drawer-footer">
+      <span>Flowverse Tech (OPC) Private Limited</span>
+      <span>Chennai, Tamil Nadu, India</span>
+      <a href="mailto:admin.flowverse@gmail.com" style="color: var(--cyan);">admin.flowverse@gmail.com</a>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MAIN CONTENT
+       ========================================================================== -->
+  <main id="main-content">
+
+    <!-- ==========================================================================
+         2. HERO SECTION
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-content">
+        
+        <!-- Cyan-blue Eyebrow Label -->
+        <div class="label-eyebrow reveal-on-scroll">
+          <span>Software solutions | App developers, Chennai</span>
+        </div>
+
+        <!-- Full Flowverse Logo (large, softly glowing centerpiece, directly on navy canvas) -->
+        <div class="hero-logo-wrapper reveal-on-scroll stagger-1">
+          <img src="assets/flowverse-full-transparent.png" alt="Flowverse Tech — Software Solutions | App Developers" class="hero-logo-img" width="580" height="195">
+        </div>
+
+        <!-- Hero Headline (Word-by-word reveal with fluid type) -->
+        <h1 class="heading-primary hero-title reveal-on-scroll stagger-2">
+          <span class="word-span">Helping</span>
+          <span class="word-span">local</span>
+          <span class="word-span">businesses</span>
+          <span class="word-span">be</span>
+          <span class="text-gradient word-span">found,</span>
+          <span class="word-span">and</span>
+          <span class="text-gradient word-span">booked.</span>
+        </h1>
+
+        <!-- Supporting Line -->
+        <p class="hero-subtitle reveal-on-scroll stagger-3">
+          Flowverse builds simple digital tools for local service businesses, starting with <strong>TimeToU</strong>, an online aggregator that connects customers with salons and beauty parlours and helps providers manage appointment requests in one place.
+        </p>
+
+        <!-- Hero CTA Buttons -->
+        <div class="hero-cta-group reveal-on-scroll stagger-4">
+          <a href="#timetou" class="btn btn-primary">
+            <span>Meet TimeToU</span>
+            <svg class="btn-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="10" x2="15" y2="10"></line>
+              <polyline points="10 5 15 10 10 15"></polyline>
+            </svg>
+          </a>
+
+          <a href="#contact" class="btn btn-secondary">
+            <span>Join as an early provider</span>
+          </a>
+        </div>
+
+        <!-- Minimal Animated Line-Art Illustration (Calendar & Map Pin that gently draws itself) -->
+        <div class="hero-illustration reveal-on-scroll stagger-5" aria-hidden="true">
+          <svg class="hero-line-art" viewBox="0 0 340 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Connecting circuit arc -->
+            <path class="line-draw" d="M 40 50 Q 170 10 300 50" stroke="#2D7BFF" stroke-width="1.8" stroke-dasharray="4 4" opacity="0.45" />
+            
+            <!-- Calendar Icon Line-Art -->
+            <g transform="translate(40, 25)">
+              <rect class="line-draw" x="0" y="5" width="46" height="42" rx="8" stroke="#27C4FF" stroke-width="2" fill="none" />
+              <line class="line-draw" x1="0" y1="18" x2="46" y2="18" stroke="#2D7BFF" stroke-width="1.5" />
+              <circle cx="12" cy="0" r="3" fill="#27C4FF" />
+              <circle cx="34" cy="0" r="3" fill="#27C4FF" />
+              <circle cx="14" cy="28" r="2.5" fill="#27C4FF" />
+              <circle cx="23" cy="28" r="2.5" fill="#27C4FF" />
+              <circle cx="32" cy="28" r="2.5" fill="#27C4FF" />
+              <circle cx="14" cy="36" r="2.5" fill="#27C4FF" />
+              <circle cx="23" cy="36" r="2.5" fill="#27C4FF" />
+            </g>
+
+            <!-- Center Flow Node -->
+            <circle cx="170" cy="30" r="4" fill="#7A4DFF" />
+            <circle cx="170" cy="30" r="9" stroke="#7A4DFF" stroke-width="1" stroke-dasharray="2 2" opacity="0.6" />
+
+            <!-- Map Pin Icon Line-Art -->
+            <g transform="translate(254, 25)">
+              <path class="line-draw" d="M 23 2 C 12 2 4 10 4 21 C 4 33 23 48 23 48 C 23 48 42 33 42 21 C 42 10 34 2 23 2 Z" stroke="#7A4DFF" stroke-width="2" fill="none" />
+              <circle cx="23" cy="18" r="5" fill="#27C4FF" />
+            </g>
+          </svg>
+        </div>
+
+        <!-- Subtle Animated Scroll Cue -->
+        <a href="#problem" class="hero-scroll-cue reveal-on-scroll stagger-6" aria-label="Scroll down to the Problem section">
+          <div class="mouse-pill">
+            <div class="mouse-wheel"></div>
+          </div>
+          <span>Scroll to explore</span>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         3. THE PROBLEM SECTION
+         ========================================================================== -->
+    <section class="section section--alt" id="problem">
+      <div class="container">
+        <header class="section-header">
+          <div class="label-eyebrow reveal-on-scroll">The Reality Today</div>
+          <h2 class="heading-secondary reveal-on-scroll stagger-1">
+            Appointments shouldn't live in a dozen places.
+          </h2>
+          <p class="lead-text reveal-on-scroll stagger-2">
+            Local service booking is still fragmented across phone calls, lost chats, and missed direct messages. Both customers and parlour owners deserve a cleaner, simpler flow.
+          </p>
+        </header>
+
+        <!-- 3 Problem Cards -->
+        <div class="problem-grid">
+          <!-- Card 1 -->
+          <article class="problem-card glass-card reveal-on-scroll stagger-1">
+            <div class="problem-icon-wrapper" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </div>
+            <h3 class="heading-tertiary">Fragmented Discovery</h3>
+            <p>
+              Customers cannot easily compare nearby service providers, detailed service menus, prices, and available time slots in one trusted place.
+            </p>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="problem-card glass-card reveal-on-scroll stagger-2">
+            <div class="problem-icon-wrapper" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3 class="heading-tertiary">Digital Overhead</h3>
+            <p>
+              Small businesses rarely have the time, budget, or technical staff needed to build and maintain a custom website and search-friendly local presence.
+            </p>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="problem-card glass-card reveal-on-scroll stagger-3">
+            <div class="problem-icon-wrapper" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                <line x1="9" y1="10" x2="9.01" y2="10"></line>
+                <line x1="15" y1="10" x2="15.01" y2="10"></line>
+              </svg>
+            </div>
+            <h3 class="heading-tertiary">Scattered Enquiries</h3>
+            <p>
+              Booking messages scattered across quick calls and chat apps get missed during peak hours, accidentally duplicated, or answered too late.
+            </p>
+          </article>
+        </div>
+
+        <!-- Ecosystem Context Note -->
+        <div class="context-callout reveal-on-scroll stagger-4">
+          <svg class="context-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+          <div>
+            <strong>A note on context:</strong> India has a very large small-business ecosystem — more than 7.83 crore enterprises registered on the Udyam platforms as of 28 February 2026, according to the Ministry of MSME. This is shared solely to illustrate the vitality of local enterprise, not as a measure of TimeToU's own addressable market.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         4. MEET TIMETOU & INTERACTIVE PREVIEW DEMO
+         ========================================================================== -->
+    <section class="section" id="timetou">
+      <div class="container">
+        
+        <div class="timetou-grid">
+          <!-- Left Column: Copy & Value Proposition -->
+          <div class="timetou-info">
+            <div class="label-eyebrow reveal-on-scroll">Introducing Our First Product</div>
+            
+            <div class="reveal-on-scroll stagger-1">
+              <h2 class="timetou-brand-title">
+                TimeToU
+                <svg class="title-underline-svg" viewBox="0 0 200 8" fill="none" preserveAspectRatio="none" aria-hidden="true">
+                  <path class="line-draw" d="M 0 4 Q 100 8 200 4" stroke="url(#title-grad)" stroke-width="3" stroke-linecap="round" />
+                  <defs>
+                    <linearGradient id="title-grad" x1="0" y1="0" x2="1" y2="0">
+                      <stop offset="0%" stop-color="#27C4FF" />
+                      <stop offset="50%" stop-color="#2D7BFF" />
+                      <stop offset="100%" stop-color="#7A4DFF" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </h2>
+            </div>
+
+            <p class="timetou-desc reveal-on-scroll stagger-2">
+              An online aggregator and AI-enabled discovery and appointment-booking platform. Customers explore local providers and request appointments; providers get a dedicated landing page; designed as a seamless web experience with optional app hand-off where available.
+            </p>
+
+            <div class="timetou-pills reveal-on-scroll stagger-3">
+              <span class="feature-pill-tag">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Dedicated provider landing pages
+              </span>
+              <span class="feature-pill-tag">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                AI-assisted local SEO drafts
+              </span>
+              <span class="feature-pill-tag">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Zero-setup web bookings
+              </span>
+            </div>
+
+            <div class="timetou-actions reveal-on-scroll stagger-4">
+              <a href="https://timetou.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <span>Visit timetou.com</span>
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+
+              <a href="#contact" class="btn btn-primary">
+                <span>Become an early provider</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive TimeToU Experience Preview (Phone Frame) -->
+          <div class="demo-wrapper reveal-on-scroll stagger-2">
+            <div class="demo-phone-card" id="demo-phone-card">
+              <div class="demo-notch" aria-hidden="true"></div>
+
+              <!-- Live Demo Badge -->
+              <div class="demo-header-badge">
+                <div class="demo-live-dot">Interactive Preview</div>
+                <div class="demo-notice-tag">Sample data only</div>
+              </div>
+
+              <!-- Interactive Booking State View -->
+              <div id="demo-booking-view">
+                <!-- 1. Select Service -->
+                <div class="demo-section-label">1. Choose Service</div>
+                <div class="demo-services-list" role="radiogroup" aria-label="Select sample service">
+                  <div class="demo-service-item selected" role="radio" aria-checked="true" tabindex="0" data-service-name="Signature Haircut & Style (₹350)">
+                    <div>
+                      <div class="demo-service-title">Signature Haircut & Style</div>
+                      <div class="demo-service-meta">45 mins · Wash, cut & styling</div>
+                    </div>
+                    <div class="demo-service-price">₹350</div>
+                  </div>
+
+                  <div class="demo-service-item" role="radio" aria-checked="false" tabindex="0" data-service-name="Hydra-Glow Herbal Facial (₹850)">
+                    <div>
+                      <div class="demo-service-title">Hydra-Glow Herbal Facial</div>
+                      <div class="demo-service-meta">60 mins · Deep cleanse & exfoliation</div>
+                    </div>
+                    <div class="demo-service-price">₹850</div>
+                  </div>
+
+                  <div class="demo-service-item" role="radio" aria-checked="false" tabindex="0" data-service-name="Deluxe Manicure & Hand Spa (₹450)">
+                    <div>
+                      <div class="demo-service-title">Deluxe Manicure & Hand Spa</div>
+                      <div class="demo-service-meta">40 mins · Scrub, massage & polish</div>
+                    </div>
+                    <div class="demo-service-price">₹450</div>
+                  </div>
+                </div>
+
+                <!-- 2. Pick a Date -->
+                <div class="demo-section-label">2. Select Date</div>
+                <div class="demo-dates-strip" role="radiogroup" aria-label="Select date">
+                  <button type="button" class="demo-date-btn selected" aria-label="Today, 24 October">
+                    <span class="demo-date-day">Fri</span>
+                    <span class="demo-date-num">24</span>
+                  </button>
+                  <button type="button" class="demo-date-btn" aria-label="Saturday, 25 October">
+                    <span class="demo-date-day">Sat</span>
+                    <span class="demo-date-num">25</span>
+                  </button>
+                  <button type="button" class="demo-date-btn" aria-label="Sunday, 26 October">
+                    <span class="demo-date-day">Sun</span>
+                    <span class="demo-date-num">26</span>
+                  </button>
+                  <button type="button" class="demo-date-btn" aria-label="Monday, 27 October">
+                    <span class="demo-date-day">Mon</span>
+                    <span class="demo-date-num">27</span>
+                  </button>
+                  <button type="button" class="demo-date-btn" aria-label="Tuesday, 28 October">
+                    <span class="demo-date-day">Tue</span>
+                    <span class="demo-date-num">28</span>
+                  </button>
+                </div>
+
+                <!-- 3. Choose Time Slot -->
+                <div class="demo-section-label">3. Available Slot</div>
+                <div class="demo-slots-strip" role="radiogroup" aria-label="Select time slot">
+                  <button type="button" class="demo-slot-btn selected">10:30 AM</button>
+                  <button type="button" class="demo-slot-btn">02:15 PM</button>
+                  <button type="button" class="demo-slot-btn">05:45 PM</button>
+                </div>
+
+                <!-- 4. Submit Appointment Request -->
+                <button type="button" class="demo-submit-btn" id="demo-submit-btn">
+                  Request appointment
+                </button>
+              </div>
+
+              <!-- Animated Confirmation View (Shown on click) -->
+              <div class="demo-confirmation-view" id="demo-confirm-view" aria-live="polite">
+                <div class="demo-check-circle" aria-hidden="true">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <div class="demo-confirm-title">Request Received!</div>
+                <p style="font-size: 0.88rem; color: var(--text-mid);">
+                  The provider receives your enquiry immediately in their dedicated dashboard.
+                </p>
+
+                <div class="demo-confirm-summary">
+                  <div><strong>Provider:</strong> Chennai Salon & Parlour Partner (Sample)</div>
+                  <div><strong>Service:</strong> <span id="demo-summary-service">Signature Haircut & Style (₹350)</span></div>
+                  <div><strong>Slot:</strong> <span id="demo-summary-datetime">Today at 10:30 AM</span></div>
+                  <div><strong>Status:</strong> <span style="color: var(--cyan); font-weight: 600;">Awaiting Provider Confirmation</span></div>
+                </div>
+
+                <div style="font-size: 0.75rem; color: var(--text-low); margin-bottom: 16px;">
+                  This is a demonstration preview with sample data. No real booking was placed.
+                </div>
+
+                <button type="button" class="demo-reset-btn" id="demo-reset-btn">
+                  Try another booking preview
+                </button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         5. HOW IT WORKS (WITH CUSTOMER / PROVIDER TOGGLE)
+         ========================================================================== -->
+    <section class="section section--alt" id="how-it-works">
+      <div class="container">
+        
+        <header class="section-header">
+          <div class="label-eyebrow reveal-on-scroll">Simple, Connected Flow</div>
+          <h2 class="heading-secondary reveal-on-scroll stagger-1">
+            Designed to remove friction for both sides.
+          </h2>
+          <p class="lead-text reveal-on-scroll stagger-2">
+            Switch between the customer experience and provider workflow to see how TimeToU brings clarity to local appointments.
+          </p>
+        </header>
+
+        <!-- Customer / Provider Pill Toggle -->
+        <div class="flow-toggle-wrapper reveal-on-scroll stagger-2">
+          <div class="flow-toggle-container" id="flow-toggle-container" role="tablist" aria-label="Choose perspective">
+            <div class="flow-toggle-slider" aria-hidden="true"></div>
+            <button type="button" class="flow-toggle-btn active" id="toggle-customer" role="tab" aria-selected="true" aria-controls="flow-view-customers">
+              For customers
+            </button>
+            <button type="button" class="flow-toggle-btn" id="toggle-provider" role="tab" aria-selected="false" aria-controls="flow-view-providers">
+              For providers
+            </button>
+          </div>
+        </div>
+
+        <div class="flow-views-container">
+          
+          <!-- View 1: For Customers -->
+          <div class="flow-view" id="flow-view-customers" role="tabpanel" aria-labelledby="toggle-customer">
+            <div class="steps-track">
+              <!-- Connecting self-drawing line -->
+              <div class="steps-connecting-line" aria-hidden="true">
+                <div class="steps-connecting-line-fill" id="steps-connecting-fill"></div>
+              </div>
+
+              <!-- Step 1 -->
+              <div class="step-card glass-card reveal-on-scroll stagger-1">
+                <div class="step-number-badge">1</div>
+                <h3>Discover</h3>
+                <p>
+                  Find trusted nearby salons, beauty parlours, and stylists by locality, neighborhood, and specific services in Chennai.
+                </p>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="step-card glass-card reveal-on-scroll stagger-2">
+                <div class="step-number-badge">2</div>
+                <h3>Compare</h3>
+                <p>
+                  Review services, transparent prices, operating hours, and business details on each provider's dedicated web landing page.
+                </p>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="step-card glass-card reveal-on-scroll stagger-3">
+                <div class="step-number-badge">3</div>
+                <h3>Book</h3>
+                <p>
+                  Request or manage an appointment slot with immediate confirmation timelines and convenient notification updates.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- View 2: For Providers -->
+          <div class="flow-view hidden" id="flow-view-providers" role="tabpanel" aria-labelledby="toggle-provider">
+            <div class="steps-track">
+              <!-- Step 1 -->
+              <div class="step-card glass-card">
+                <div class="step-number-badge">1</div>
+                <h3>Get Approved</h3>
+                <p>
+                  Quick digital verification tailored specifically for independent Chennai salons, grooming parlours, and beauty professionals.
+                </p>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="step-card glass-card">
+                <div class="step-number-badge">2</div>
+                <h3>Get Your Page</h3>
+                <p>
+                  Receive a search-optimised, dedicated landing page for your salon with clear service listings and shareable social links.
+                </p>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="step-card glass-card">
+                <div class="step-number-badge">3</div>
+                <h3>Manage Enquiries</h3>
+                <p>
+                  Keep all incoming appointment requests, service edits, and customer communications organized in one simple dashboard.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         6. FEATURES (GRID OF 6 WITH EXPANDABLE DETAILS & 3D TILT)
+         ========================================================================== -->
+    <section class="section" id="features">
+      <div class="container">
+        
+        <header class="section-header">
+          <div class="label-eyebrow reveal-on-scroll">Platform Capabilities</div>
+          <h2 class="heading-secondary reveal-on-scroll stagger-1">
+            Crafted for clarity, built to scale.
+          </h2>
+          <p class="lead-text reveal-on-scroll stagger-2">
+            Every feature is designed to reduce administrative friction and help Chennai's small businesses thrive online.
+          </p>
+        </header>
+
+        <div class="features-grid">
+          
+          <!-- Feature 1 -->
+          <div class="glass-card feature-card reveal-on-scroll stagger-1" tabindex="0">
+            <div class="feature-top-row">
+              <div class="feature-icon-box" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+              </div>
+            </div>
+            <h3 class="feature-title">Dedicated Provider Pages</h3>
+            <p class="feature-summary">
+              Custom landing pages organised by category, locality, and business name — search-optimised and instant to load.
+            </p>
+            <div class="feature-expanded-content">
+              Gives every salon their own custom URL and shareable web link to place directly on WhatsApp, Instagram bio, and Google Business Profile.
+            </div>
+            <button type="button" class="feature-expand-btn" aria-expanded="false" aria-label="Expand feature details">
+              <span class="feature-expand-label">Learn more</span>
+              <svg class="plus-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="glass-card feature-card reveal-on-scroll stagger-2" tabindex="0">
+            <div class="feature-top-row">
+              <div class="feature-icon-box" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+              </div>
+            </div>
+            <h3 class="feature-title">Booking-Focused Journey</h3>
+            <p class="feature-summary">
+              A streamlined customer experience focused purely on checking service availability and requesting appointments in seconds.
+            </p>
+            <div class="feature-expanded-content">
+              Eliminates intrusive popups, long signup barriers, and cluttered advertising so customers can complete requests in under 60 seconds.
+            </div>
+            <button type="button" class="feature-expand-btn" aria-expanded="false" aria-label="Expand feature details">
+              <span class="feature-expand-label">Learn more</span>
+              <svg class="plus-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="glass-card feature-card reveal-on-scroll stagger-3" tabindex="0">
+            <div class="feature-top-row">
+              <div class="feature-icon-box" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="7" height="9"></rect>
+                  <rect x="14" y="3" width="7" height="5"></rect>
+                  <rect x="14" y="12" width="7" height="9"></rect>
+                  <rect x="3" y="16" width="7" height="5"></rect>
+                </svg>
+              </div>
+            </div>
+            <h3 class="feature-title">Simple Partner Dashboard</h3>
+            <p class="feature-summary">
+              Easily manage your service menu, pricing, business hours, and booking requests from your phone or desktop.
+            </p>
+            <div class="feature-expanded-content">
+              Built deliberately for non-technical salon managers and solo stylists. No complicated software manual or steep learning curve required.
+            </div>
+            <button type="button" class="feature-expand-btn" aria-expanded="false" aria-label="Expand feature details">
+              <span class="feature-expand-label">Learn more</span>
+              <svg class="plus-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="glass-card feature-card reveal-on-scroll stagger-4" tabindex="0">
+            <div class="feature-top-row">
+              <div class="feature-icon-box" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+              </div>
+              <span class="feature-tag-badge tag-planned">Planned</span>
+            </div>
+            <h3 class="feature-title">AI-Assisted Local Marketing</h3>
+            <p class="feature-summary">
+              Automated drafts for local SEO keywords, FAQs, Google Business Profile updates, and friendly review responses.
+            </p>
+            <div class="feature-expanded-content">
+              Providers maintain 100% editorial control: you review, modify, and explicitly approve every AI-generated suggestion before anything is published.
+            </div>
+            <button type="button" class="feature-expand-btn" aria-expanded="false" aria-label="Expand feature details">
+              <span class="feature-expand-label">Learn more</span>
+              <svg class="plus-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Feature 5 -->
+          <div class="glass-card feature-card reveal-on-scroll stagger-5" tabindex="0">
+            <div class="feature-top-row">
+              <div class="feature-icon-box" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+              </div>
+            </div>
+            <h3 class="feature-title">Self-Service Onboarding</h3>
+            <p class="feature-summary">
+              Pre-configured service templates for haircutting, bridal styling, spa, and skincare let businesses get set up in minutes.
+            </p>
+            <div class="feature-expanded-content">
+              Select standard service presets, tweak prices and durations, and go live without writing a single line of code or filling tedious forms.
+            </div>
+            <button type="button" class="feature-expand-btn" aria-expanded="false" aria-label="Expand feature details">
+              <span class="feature-expand-label">Learn more</span>
+              <svg class="plus-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Feature 6 -->
+          <div class="glass-card feature-card reveal-on-scroll stagger-6" tabindex="0">
+            <div class="feature-top-row">
+              <div class="feature-icon-box" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <span class="feature-tag-badge tag-concept">Concept</span>
+            </div>
+            <h3 class="feature-title">Smart In-Store Display</h3>
+            <p class="feature-summary">
+              A counter-top QR display concept linking walk-in customers directly to your real-time booking availability.
+            </p>
+            <div class="feature-expanded-content">
+              An exploration we may develop to convert walk-in parlour traffic into recurring digital bookings and reduce in-person waiting queues.
+            </div>
+            <button type="button" class="feature-expand-btn" aria-expanded="false" aria-label="Expand feature details">
+              <span class="feature-expand-label">Learn more</span>
+              <svg class="plus-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         7. WHO IT'S FOR
+         ========================================================================== -->
+    <section class="section section--alt" id="audience">
+      <div class="container">
+        <div class="audience-split">
+          
+          <!-- Left Column -->
+          <div class="glass-card audience-card-primary reveal-on-scroll">
+            <div class="label-eyebrow">Focused Adoption</div>
+            <h2 class="heading-secondary">
+              Starting with Chennai's vibrant salon community.
+            </h2>
+            <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-mid);">
+              We are deliberately focusing our early efforts on Chennai to create deep value for local salons before expanding to other sectors.
+            </p>
+
+            <ul class="audience-list">
+              <li class="audience-item">
+                <svg class="audience-check" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 5 8 13 4 9"></polyline>
+                </svg>
+                <span><strong>Independent Salons & Beauty Parlours:</strong> Neighborhood grooming spaces looking for clean digital visibility and organized booking.</span>
+              </li>
+
+              <li class="audience-item">
+                <svg class="audience-check" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 5 8 13 4 9"></polyline>
+                </svg>
+                <span><strong>Independent Stylists & Therapists:</strong> Solo personal care professionals who want a reliable booking link without website overhead.</span>
+              </li>
+
+              <li class="audience-item">
+                <svg class="audience-check" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 5 8 13 4 9"></polyline>
+                </svg>
+                <span><strong>Multi-Outlet Local Brands:</strong> Boutique chains operating across Chennai zones that need consistent appointment management.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Right Column -->
+          <div class="reveal-on-scroll stagger-2">
+            <h3 class="heading-secondary" style="font-size: 1.8rem;">
+              Why Chennai first?
+            </h3>
+            <p style="font-size: 1.05rem; line-height: 1.75; color: var(--text-mid); margin-bottom: 24px;">
+              We believe in starting deep rather than wide. By walking into Chennai parlours, listening to salon owners across Adyar, Anna Nagar, T. Nagar, Velachery, and OMR, and understanding real day-to-day booking friction, we ensure TimeToU solves practical problems.
+            </p>
+            <p style="font-size: 1.05rem; line-height: 1.75; color: var(--text-mid); margin-bottom: 32px;">
+              As onboarding is proven in Chennai, we will gradually expand into adjacent personal-care services and neighboring regions.
+            </p>
+
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+              <span class="feature-pill-tag">Anna Nagar</span>
+              <span class="feature-pill-tag">T. Nagar</span>
+              <span class="feature-pill-tag">Adyar</span>
+              <span class="feature-pill-tag">Velachery</span>
+              <span class="feature-pill-tag">Nungambakkam</span>
+              <span class="feature-pill-tag">Besant Nagar</span>
+              <span class="feature-pill-tag">OMR Corridor</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         8. A LEAN, HONEST APPROACH
+         ========================================================================== -->
+    <section class="section" id="approach">
+      <div class="container">
+        
+        <div class="glass-card approach-card reveal-on-scroll">
+          <div class="label-eyebrow">Our Philosophy</div>
+          <h2 class="heading-secondary" style="margin-bottom: 12px;">
+            Built with discipline. Honest about where we are.
+          </h2>
+
+          <div class="approach-quote">
+            We are early. We will share real numbers when we have them.
+          </div>
+
+          <p style="font-size: 1.05rem; line-height: 1.75; color: var(--text-mid); max-width: 720px; margin: 0 auto;">
+            We don't manufacture false statistics, inflated user counts, or unrealistic claims. We build with modern cloud tools, smart automation, and AI to keep infrastructure lightweight and pass those efficiency benefits directly to local businesses.
+          </p>
+
+          <div class="approach-pillars">
+            <div class="pillar-item">
+              <h4>Free Standard Listings</h4>
+              <p>Early approved providers receive their dedicated landing page and standard booking features at zero cost while initial platform adoption grows.</p>
+            </div>
+
+            <div class="pillar-item">
+              <h4>Listen Before Monetizing</h4>
+              <p>Optional premium capabilities will only be designed and tested after closely observing how providers and clients interact with the platform.</p>
+            </div>
+
+            <div class="pillar-item">
+              <h4>Accessible Technology</h4>
+              <p>High-end software quality should not be restricted to large salon chains. We build accessible, dependable tools for small businesses.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         9. ROADMAP (INTERACTIVE 3-PHASE TIMELINE)
+         ========================================================================== -->
+    <section class="section section--alt" id="roadmap">
+      <div class="container">
+        
+        <header class="section-header">
+          <div class="label-eyebrow reveal-on-scroll">Evolution & Milestones</div>
+          <h2 class="heading-secondary reveal-on-scroll stagger-1">
+            Our phased journey ahead.
+          </h2>
+          <div class="roadmap-notice-badge reveal-on-scroll stagger-2">
+            <span>Notice: These are planning goals, not achievements.</span>
+          </div>
+        </header>
+
+        <div class="roadmap-timeline">
+          <!-- Timeline Track Connector (Desktop) -->
+          <div class="roadmap-connector-line" aria-hidden="true">
+            <div class="roadmap-connector-fill" id="roadmap-connector-fill"></div>
+          </div>
+
+          <!-- Phase 1 -->
+          <div class="roadmap-phase-card active reveal-on-scroll stagger-1" tabindex="0">
+            <div class="phase-node-marker">1</div>
+            <div class="phase-badge">Phase 1</div>
+            <div class="phase-time">0 to 3 Months</div>
+            <h3 class="phase-title">Pilot & Initial Cohort</h3>
+            <p class="phase-description">
+              Hand-onboarding our initial cohort of Chennai salons. Testing core appointment requests, landing page templates, and real-time client notifications.
+            </p>
+            <span class="phase-target-tag">Goal: 25 to 50 Providers</span>
+          </div>
+
+          <!-- Phase 2 -->
+          <div class="roadmap-phase-card reveal-on-scroll stagger-2" tabindex="0">
+            <div class="phase-node-marker">2</div>
+            <div class="phase-badge">Phase 2</div>
+            <div class="phase-time">3 to 6 Months</div>
+            <h3 class="phase-title">Growth & Premium Testing</h3>
+            <p class="phase-description">
+              Expanding coverage across major Chennai localities, refining provider analytics, and piloting optional premium features guided by provider feedback.
+            </p>
+            <span class="phase-target-tag">Goal: 100 to 200 Providers</span>
+          </div>
+
+          <!-- Phase 3 -->
+          <div class="roadmap-phase-card reveal-on-scroll stagger-3" tabindex="0">
+            <div class="phase-node-marker">3</div>
+            <div class="phase-badge">Phase 3</div>
+            <div class="phase-time">6 to 12 Months</div>
+            <h3 class="phase-title">Scale & Sustainable Break-Even</h3>
+            <p class="phase-description">
+              Expanding into adjacent personal care categories, launching AI marketing assistance drafts, and working toward operating break-even.
+            </p>
+            <span class="phase-target-tag">Goal: 300 to 500 Providers</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         10. FINAL CALL TO ACTION & CONTACT
+         ========================================================================== -->
+    <section class="section cta-section" id="contact">
+      <div class="container">
+        
+        <div class="cta-grid">
+          
+          <!-- Contact Info Left Column -->
+          <div class="contact-meta-card reveal-on-scroll">
+            <div class="label-eyebrow">Early Access</div>
+            <h2 class="heading-primary" style="font-size: clamp(2.2rem, 4.5vw, 3.4rem); margin-bottom: 18px;">
+              Be one of our first providers.
+            </h2>
+            <p style="font-size: 1.1rem; line-height: 1.72; color: var(--text-mid); margin-bottom: 24px;">
+              Join Chennai's early salon cohort. Get a dedicated landing page, streamlined booking requests, and hands-on onboarding support from our founding team.
+            </p>
+
+            <div class="contact-channels-list">
+              <a href="mailto:admin.flowverse@gmail.com" class="contact-channel-item">
+                <div class="channel-icon-box" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <div style="font-size: 0.8rem; color: var(--text-low); text-transform: uppercase; letter-spacing: 0.05em;">Direct Email</div>
+                  <strong style="color: var(--text-hi);">admin.flowverse@gmail.com</strong>
+                </div>
+              </a>
+
+              <a href="tel:8144014143" class="contact-channel-item">
+                <div class="channel-icon-box" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div style="font-size: 0.8rem; color: var(--text-low); text-transform: uppercase; letter-spacing: 0.05em;">Phone / WhatsApp</div>
+                  <strong style="color: var(--text-hi);">8144014143</strong>
+                </div>
+              </a>
+
+              <div class="contact-channel-item">
+                <div class="channel-icon-box" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div>
+                  <div style="font-size: 0.8rem; color: var(--text-low); text-transform: uppercase; letter-spacing: 0.05em;">Base of Operations</div>
+                  <strong style="color: var(--text-hi);">Chennai, Tamil Nadu, India</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form Right Column -->
+          <div class="contact-form-container reveal-on-scroll stagger-2">
+            <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+            <form id="early-provider-form" novalidate>
+              <div class="form-row-2">
+                <!-- Name -->
+                <div class="form-group">
+                  <input type="text" id="contact-name" class="form-input" placeholder=" " required autocomplete="name">
+                  <label for="contact-name" class="form-label">Your Name</label>
+                </div>
+
+                <!-- Business Name -->
+                <div class="form-group">
+                  <input type="text" id="contact-business" class="form-input" placeholder=" " required autocomplete="organization">
+                  <label for="contact-business" class="form-label">Salon / Business Name</label>
+                </div>
+              </div>
+
+              <div class="form-row-2">
+                <!-- Chennai Locality -->
+                <div class="form-group">
+                  <select id="contact-locality" class="form-select" required aria-label="Select your Chennai locality">
+                    <option value="" disabled selected hidden></option>
+                    <option value="Anna Nagar">Anna Nagar</option>
+                    <option value="T. Nagar">T. Nagar</option>
+                    <option value="Adyar">Adyar</option>
+                    <option value="Velachery">Velachery</option>
+                    <option value="Nungambakkam">Nungambakkam</option>
+                    <option value="Besant Nagar">Besant Nagar</option>
+                    <option value="OMR Corridor">OMR Corridor</option>
+                    <option value="Porur">Porur</option>
+                    <option value="Kilpauk">Kilpauk</option>
+                    <option value="Alwarpet">Alwarpet</option>
+                    <option value="Mylapore">Mylapore</option>
+                    <option value="Other Chennai Locality">Other Chennai Locality</option>
+                  </select>
+                  <label for="contact-locality" class="form-label">Locality in Chennai</label>
+                </div>
+
+                <!-- Service Type -->
+                <div class="form-group">
+                  <select id="contact-service" class="form-select" required aria-label="Select primary service type">
+                    <option value="" disabled selected hidden></option>
+                    <option value="Hair & Styling Salon">Hair & Styling Salon</option>
+                    <option value="Beauty Parlour & Skincare">Beauty Parlour & Skincare</option>
+                    <option value="Nail Art & Spa">Nail Art & Spa</option>
+                    <option value="Bridal & Makeup Studio">Bridal & Makeup Studio</option>
+                    <option value="Men's Grooming Lounge">Men's Grooming Lounge</option>
+                    <option value="Multi-Service Personal Care">Multi-Service Personal Care</option>
+                  </select>
+                  <label for="contact-service" class="form-label">Primary Service Type</label>
+                </div>
+              </div>
+
+              <!-- Phone or Email -->
+              <div class="form-group">
+                <input type="text" id="contact-info" class="form-input" placeholder=" " required autocomplete="email">
+                <label for="contact-info" class="form-label">Phone Number or Email</label>
+              </div>
+
+              <!-- Optional Message -->
+              <div class="form-group">
+                <textarea id="contact-message" class="form-textarea" rows="3" placeholder=" "></textarea>
+                <label for="contact-message" class="form-label">Any specific questions or details? (Optional)</label>
+              </div>
+
+              <div class="form-submit-wrapper">
+                <button type="submit" class="btn btn-primary form-submit-btn" id="form-submit-btn">
+                  <span class="btn-text">Request early provider access</span>
+                  <svg class="btn-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="10" x2="15" y2="10"></line>
+                    <polyline points="10 5 15 10 10 15"></polyline>
+                  </svg>
+                  <div class="btn-spinner" aria-label="Loading"></div>
+                </button>
+              </div>
+
+              <!-- Success Notification Banner -->
+              <div class="form-success-banner" id="form-success-banner" role="alert">
+                <h4 style="color: var(--success); font-size: 1.15rem; margin-bottom: 6px;">Thank you for reaching out!</h4>
+                <p style="font-size: 0.94rem; color: var(--text-mid);">
+                  We have received your details. A member of our founding team will get in touch with you shortly to discuss your salon's dedicated page.
+                </p>
+                <div style="margin-top: 10px; font-size: 0.85rem; color: var(--text-low);">
+                  Prefer writing directly? Reach us at <a href="mailto:admin.flowverse@gmail.com" style="color: var(--cyan); text-decoration: underline;">admin.flowverse@gmail.com</a>
+                </div>
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         10B. HONEST FAQ ACCORDION (PLACED DIRECTLY ABOVE ABOUT US)
+         ========================================================================== -->
+    <section class="section section--alt" id="faq">
+      <div class="container faq-container">
+        
+        <header class="section-header">
+          <div class="label-eyebrow reveal-on-scroll">Questions & Answers</div>
+          <h2 class="heading-secondary reveal-on-scroll stagger-1">
+            Everything you need to know.
+          </h2>
+          <p class="lead-text reveal-on-scroll stagger-2">
+            Clear, honest answers about Flowverse, TimeToU, and how we work with local service providers.
+          </p>
+        </header>
+
+        <div class="faq-list">
+          
+          <!-- FAQ 1 -->
+          <div class="faq-item reveal-on-scroll stagger-1">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>What is TimeToU?</span>
+              <svg class="faq-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer-pane">
+              <div class="faq-answer-content">
+                TimeToU is an online aggregator and AI-enabled service discovery and appointment-booking platform developed by Flowverse. It helps customers find nearby salons and parlours and schedule appointments easily, while giving providers a dedicated web presence and a central place to manage booking enquiries.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item reveal-on-scroll stagger-2">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>Who is TimeToU designed for?</span>
+              <svg class="faq-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer-pane">
+              <div class="faq-answer-content">
+                TimeToU is primarily designed for independent salons, beauty parlours, barbershops, nail studios, and personal care professionals in Chennai. It also serves customers looking for a trustworthy, uncomplicated way to discover local service providers without telephone tag or unread chat messages.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item reveal-on-scroll stagger-3">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>Is listing free for service providers?</span>
+              <svg class="faq-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer-pane">
+              <div class="faq-answer-content">
+                Yes. Standard listings and dedicated landing pages are 100% free for approved early providers during our initial adoption phase. We believe in providing value first; optional premium features will only be tested later after listening to the genuine needs of our provider community.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item reveal-on-scroll stagger-4">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>Where does TimeToU start?</span>
+              <svg class="faq-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer-pane">
+              <div class="faq-answer-content">
+                We are beginning specifically in Chennai, Tamil Nadu, focusing on key residential and commercial neighborhoods such as Anna Nagar, T. Nagar, Adyar, Velachery, and OMR. We will expand to other regions only after onboarding and operations are thoroughly proven.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item reveal-on-scroll stagger-5">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>Do you have customers yet?</span>
+              <svg class="faq-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer-pane">
+              <div class="faq-answer-content">
+                We are in the early stages of our journey. We are currently recruiting and onboarding our pilot cohort of 25 to 50 providers. We do not manufacture inflated metrics or fake testimonials; we will openly publish verified traction data as real bookings occur.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         11. ABOUT US (THE BOTTOM-MOST CONTENT SECTION, DIRECTLY ABOVE FOOTER)
+         ========================================================================== -->
+    <section class="section" id="about">
+      <div class="container">
+        
+        <header class="section-header section-header--left">
+          <div class="label-eyebrow reveal-on-scroll">About Us</div>
+          <h2 class="heading-secondary reveal-on-scroll stagger-1">
+            The people and thinking behind Flowverse.
+          </h2>
+          <p class="lead-text reveal-on-scroll stagger-2">
+            A software solutions and app development company based in Chennai, committed to thoughtful, practical craft.
+          </p>
+        </header>
+
+        <div class="about-grid">
+          
+          <!-- Column 1: Company Profile & Operating Model -->
+          <div class="about-company-col reveal-on-scroll stagger-1">
+            <div>
+              <h3 class="heading-tertiary" style="color: var(--cyan); margin-bottom: 8px;">Flowverse Tech (OPC) Private Limited</h3>
+              <p style="font-size: 1.05rem; line-height: 1.75; color: var(--text-mid);">
+                Flowverse is a software solutions and app development company incorporated in Chennai, Tamil Nadu, India. Our inaugural product is <strong>TimeToU</strong> (<a href="https://timetou.com" target="_blank" rel="noopener noreferrer" style="color: var(--cyan); text-decoration: underline;">timetou.com</a>), an online aggregator and AI-enabled service discovery and appointment-booking platform.
+              </p>
+            </div>
+
+            <div>
+              <h4 style="font-size: 1rem; color: var(--text-hi); margin-bottom: 6px;">Our Mission</h4>
+              <p style="font-size: 1rem; line-height: 1.7; color: var(--text-mid);">
+                To make digital discovery and appointment booking simple, transparent, and accessible for small local service businesses that form the heartbeat of our neighborhoods.
+              </p>
+            </div>
+
+            <div>
+              <h4 style="font-size: 1rem; color: var(--text-hi); margin-bottom: 6px;">How We Work</h4>
+              <p style="font-size: 1rem; line-height: 1.7; color: var(--text-mid);">
+                A lean, technology-enabled model using modern cloud tools, smart automation, and AI, bringing in specialist expertise when needed to keep overhead low and agility high.
+              </p>
+            </div>
+
+            <div style="padding-top: 12px; border-top: 1px solid var(--hairline-subtle);">
+              <h4 style="font-size: 0.95rem; color: var(--text-hi); margin-bottom: 10px;">Contact & Registered Information</h4>
+              <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.94rem; color: var(--text-mid);">
+                <li><strong>Company:</strong> Flowverse Tech (OPC) Private Limited</li>
+                <li><strong>Location:</strong> Chennai, Tamil Nadu, India</li>
+                <li><strong>Email:</strong> <a href="mailto:admin.flowverse@gmail.com" style="color: var(--cyan);">admin.flowverse@gmail.com</a></li>
+                <li><strong>Phone:</strong> <a href="tel:8144014143" style="color: var(--cyan);">8144014143</a></li>
+                <li><strong>Company Website:</strong> <a href="https://flowverse-tech.com" target="_blank" rel="noopener noreferrer" style="color: var(--cyan);">Flowverse-tech.com</a></li>
+                <li><strong>Product Website:</strong> <a href="https://timetou.com" target="_blank" rel="noopener noreferrer" style="color: var(--cyan);">timetou.com</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Column 2: Founder Information -->
+          <div class="about-founder-col reveal-on-scroll stagger-2">
+            <div class="founder-card glass-card">
+              
+              <div class="founder-avatar-wrapper">
+                <div class="founder-avatar-ring" aria-hidden="true"></div>
+                <div class="founder-avatar-inner">
+                  <span class="founder-initials">MP</span>
+                </div>
+              </div>
+
+              <h3 class="heading-tertiary" style="margin-bottom: 4px;">Manoranjan Arul Prakasam</h3>
+              <div style="font-size: 0.88rem; font-weight: 600; color: var(--cyan); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 14px;">
+                Founder
+              </div>
+
+              <p style="font-size: 0.98rem; line-height: 1.7; color: var(--text-mid);">
+                Practical background in digital platforms, Google Maps, local business discovery, and digital content, giving Flowverse and TimeToU a grounded foundation built on understanding how people search for and discover local services.
+              </p>
+
+              <!-- Clearly marked placeholder as instructed -->
+              <div class="founder-placeholder-note">
+                [FOUNDER BIO AND PHOTO TO BE ADDED]
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       12. FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <div class="footer-top-row">
+        <!-- Logo & Mission Summary -->
+        <div class="footer-brand-col">
+          <!-- Full Flowverse Logo directly on navy canvas -->
+          <a href="#hero" aria-label="Back to top">
+            <img src="assets/flowverse-full-transparent.png" alt="Flowverse Tech" class="footer-logo-img" width="260" height="88">
+          </a>
+          <p class="footer-desc">
+            Software solutions and app development for local service businesses. Starting in Chennai with TimeToU.
+          </p>
+        </div>
+
+        <!-- Product Links -->
+        <div class="footer-nav-col">
+          <h4>Product</h4>
+          <ul class="footer-links-list">
+            <li><a href="#timetou">TimeToU Overview</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#features">Platform Features</a></li>
+            <li><a href="#contact">Join as Early Provider</a></li>
+            <li><a href="https://timetou.com" target="_blank" rel="noopener noreferrer">timetou.com</a></li>
+          </ul>
+        </div>
+
+        <!-- Company & Legal Links -->
+        <div class="footer-nav-col">
+          <h4>Company</h4>
+          <ul class="footer-links-list">
+            <li><a href="#about">About Flowverse</a></li>
+            <li><a href="#approach">Our Approach</a></li>
+            <li><a href="#roadmap">Milestone Roadmap</a></li>
+            <li><a href="#faq">Frequently Asked Questions</a></li>
+            <li><a href="#contact">Contact Founding Team</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div>
+          © 2026 Flowverse Tech (OPC) Private Limited. Chennai, Tamil Nadu, India. All rights reserved.
+        </div>
+        <div style="display: flex; gap: 20px;">
+          <a href="mailto:admin.flowverse@gmail.com" style="color: var(--text-mid);">admin.flowverse@gmail.com</a>
+          <span>·</span>
+          <a href="tel:8144014143" style="color: var(--text-mid);">+91 81440 14143</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button id="back-to-top" aria-label="Back to top of page">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+</html>

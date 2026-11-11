@@ -204,75 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
   highlightNav();
 
   /* ==========================================================================
-     6. INTERACTIVE TIMETOU DEMO (PREVIEW STATE MACHINE)
-     ========================================================================== */
-  const demoServiceItems = document.querySelectorAll('.demo-service-item');
-  const demoDateBtns = document.querySelectorAll('.demo-date-btn');
-  const demoSlotBtns = document.querySelectorAll('.demo-slot-btn');
-  const demoSubmitBtn = document.getElementById('demo-submit-btn');
-  const demoBookingView = document.getElementById('demo-booking-view');
-  const demoConfirmView = document.getElementById('demo-confirm-view');
-  const demoResetBtn = document.getElementById('demo-reset-btn');
-
-  const demoSummaryService = document.getElementById('demo-summary-service');
-  const demoSummaryDateTime = document.getElementById('demo-summary-datetime');
-
-  let selectedService = 'Signature Haircut & Style (₹350)';
-  let selectedDate = 'Today, 24 Oct';
-  let selectedTime = '10:30 AM';
-
-  demoServiceItems.forEach((item) => {
-    item.addEventListener('click', () => {
-      demoServiceItems.forEach((i) => i.classList.remove('selected'));
-      item.classList.add('selected');
-      selectedService = item.getAttribute('data-service-name') || item.querySelector('.demo-service-title').textContent;
-    });
-  });
-
-  demoDateBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      demoDateBtns.forEach((b) => b.classList.remove('selected'));
-      btn.classList.add('selected');
-      const day = btn.querySelector('.demo-date-day').textContent;
-      const num = btn.querySelector('.demo-date-num').textContent;
-      selectedDate = `${day}, ${num} Oct`;
-    });
-  });
-
-  demoSlotBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      demoSlotBtns.forEach((b) => b.classList.remove('selected'));
-      btn.classList.add('selected');
-      selectedTime = btn.textContent.trim();
-    });
-  });
-
-  if (demoSubmitBtn && demoBookingView && demoConfirmView) {
-    demoSubmitBtn.addEventListener('click', () => {
-      demoSubmitBtn.disabled = true;
-      demoSubmitBtn.textContent = 'Processing request...';
-
-      setTimeout(() => {
-        if (demoSummaryService) demoSummaryService.textContent = selectedService;
-        if (demoSummaryDateTime) demoSummaryDateTime.textContent = `${selectedDate} at ${selectedTime}`;
-
-        demoBookingView.style.display = 'none';
-        demoConfirmView.style.display = 'block';
-        demoSubmitBtn.disabled = false;
-        demoSubmitBtn.textContent = 'Request appointment';
-      }, 500);
-    });
-  }
-
-  if (demoResetBtn && demoBookingView && demoConfirmView) {
-    demoResetBtn.addEventListener('click', () => {
-      demoConfirmView.style.display = 'none';
-      demoBookingView.style.display = 'block';
-    });
-  }
-
-  /* ==========================================================================
-     7. CUSTOMER / PROVIDER TOGGLE (HOW IT WORKS)
+     6. CUSTOMER / PROVIDER TOGGLE (HOW IT WORKS)
      ========================================================================== */
   const toggleContainer = document.getElementById('flow-toggle-container');
   const toggleCustomerBtn = document.getElementById('toggle-customer');

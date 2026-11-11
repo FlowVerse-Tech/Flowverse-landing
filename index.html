@@ -329,15 +329,15 @@
     </section>
 
     <!-- ==========================================================================
-         4. MEET TIMETOU & INTERACTIVE PREVIEW DEMO
+         4. MEET TIMETOU
          ========================================================================== -->
     <section class="section" id="timetou">
       <div class="container">
         
-        <div class="timetou-grid">
-          <!-- Left Column: Copy & Value Proposition -->
+        <div class="glass-card timetou-card reveal-on-scroll">
+          <!-- Copy & Value Proposition -->
           <div class="timetou-info">
-            <div class="label-eyebrow reveal-on-scroll">Introducing Our First Product</div>
+            <div class="label-eyebrow">Introducing Our First Product</div>
             
             <div class="reveal-on-scroll stagger-1">
               <h2 class="timetou-brand-title">
@@ -387,117 +387,6 @@
               <a href="#contact" class="btn btn-primary">
                 <span>Become an early provider</span>
               </a>
-            </div>
-          </div>
-
-          <!-- Right Column: Interactive TimeToU Experience Preview (Phone Frame) -->
-          <div class="demo-wrapper reveal-on-scroll stagger-2">
-            <div class="demo-phone-card" id="demo-phone-card">
-              <div class="demo-notch" aria-hidden="true"></div>
-
-              <!-- Live Demo Badge -->
-              <div class="demo-header-badge">
-                <div class="demo-live-dot">Interactive Preview</div>
-                <div class="demo-notice-tag">Sample data only</div>
-              </div>
-
-              <!-- Interactive Booking State View -->
-              <div id="demo-booking-view">
-                <!-- 1. Select Service -->
-                <div class="demo-section-label">1. Choose Service</div>
-                <div class="demo-services-list" role="radiogroup" aria-label="Select sample service">
-                  <div class="demo-service-item selected" role="radio" aria-checked="true" tabindex="0" data-service-name="Signature Haircut & Style (₹350)">
-                    <div>
-                      <div class="demo-service-title">Signature Haircut & Style</div>
-                      <div class="demo-service-meta">45 mins · Wash, cut & styling</div>
-                    </div>
-                    <div class="demo-service-price">₹350</div>
-                  </div>
-
-                  <div class="demo-service-item" role="radio" aria-checked="false" tabindex="0" data-service-name="Hydra-Glow Herbal Facial (₹850)">
-                    <div>
-                      <div class="demo-service-title">Hydra-Glow Herbal Facial</div>
-                      <div class="demo-service-meta">60 mins · Deep cleanse & exfoliation</div>
-                    </div>
-                    <div class="demo-service-price">₹850</div>
-                  </div>
-
-                  <div class="demo-service-item" role="radio" aria-checked="false" tabindex="0" data-service-name="Deluxe Manicure & Hand Spa (₹450)">
-                    <div>
-                      <div class="demo-service-title">Deluxe Manicure & Hand Spa</div>
-                      <div class="demo-service-meta">40 mins · Scrub, massage & polish</div>
-                    </div>
-                    <div class="demo-service-price">₹450</div>
-                  </div>
-                </div>
-
-                <!-- 2. Pick a Date -->
-                <div class="demo-section-label">2. Select Date</div>
-                <div class="demo-dates-strip" role="radiogroup" aria-label="Select date">
-                  <button type="button" class="demo-date-btn selected" aria-label="Today, 24 October">
-                    <span class="demo-date-day">Fri</span>
-                    <span class="demo-date-num">24</span>
-                  </button>
-                  <button type="button" class="demo-date-btn" aria-label="Saturday, 25 October">
-                    <span class="demo-date-day">Sat</span>
-                    <span class="demo-date-num">25</span>
-                  </button>
-                  <button type="button" class="demo-date-btn" aria-label="Sunday, 26 October">
-                    <span class="demo-date-day">Sun</span>
-                    <span class="demo-date-num">26</span>
-                  </button>
-                  <button type="button" class="demo-date-btn" aria-label="Monday, 27 October">
-                    <span class="demo-date-day">Mon</span>
-                    <span class="demo-date-num">27</span>
-                  </button>
-                  <button type="button" class="demo-date-btn" aria-label="Tuesday, 28 October">
-                    <span class="demo-date-day">Tue</span>
-                    <span class="demo-date-num">28</span>
-                  </button>
-                </div>
-
-                <!-- 3. Choose Time Slot -->
-                <div class="demo-section-label">3. Available Slot</div>
-                <div class="demo-slots-strip" role="radiogroup" aria-label="Select time slot">
-                  <button type="button" class="demo-slot-btn selected">10:30 AM</button>
-                  <button type="button" class="demo-slot-btn">02:15 PM</button>
-                  <button type="button" class="demo-slot-btn">05:45 PM</button>
-                </div>
-
-                <!-- 4. Submit Appointment Request -->
-                <button type="button" class="demo-submit-btn" id="demo-submit-btn">
-                  Request appointment
-                </button>
-              </div>
-
-              <!-- Animated Confirmation View (Shown on click) -->
-              <div class="demo-confirmation-view" id="demo-confirm-view" aria-live="polite">
-                <div class="demo-check-circle" aria-hidden="true">
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </div>
-                <div class="demo-confirm-title">Request Received!</div>
-                <p style="font-size: 0.88rem; color: var(--text-mid);">
-                  The provider receives your enquiry immediately in their dedicated dashboard.
-                </p>
-
-                <div class="demo-confirm-summary">
-                  <div><strong>Provider:</strong> Chennai Salon & Parlour Partner (Sample)</div>
-                  <div><strong>Service:</strong> <span id="demo-summary-service">Signature Haircut & Style (₹350)</span></div>
-                  <div><strong>Slot:</strong> <span id="demo-summary-datetime">Today at 10:30 AM</span></div>
-                  <div><strong>Status:</strong> <span style="color: var(--cyan); font-weight: 600;">Awaiting Provider Confirmation</span></div>
-                </div>
-
-                <div style="font-size: 0.75rem; color: var(--text-low); margin-bottom: 16px;">
-                  This is a demonstration preview with sample data. No real booking was placed.
-                </div>
-
-                <button type="button" class="demo-reset-btn" id="demo-reset-btn">
-                  Try another booking preview
-                </button>
-              </div>
-
             </div>
           </div>
         </div>
@@ -882,7 +771,7 @@
             We are early. We will share real numbers when we have them.
           </div>
 
-          <p style="font-size: 1.05rem; line-height: 1.75; color: var(--text-mid); max-width: 720px; margin: 0 auto;">
+          <p style="font-size: 1.05rem; line-height: 1.75; color: var(--text-mid); max-width: 980px; margin: 0 auto;">
             We don't manufacture false statistics, inflated user counts, or unrealistic claims. We build with modern cloud tools, smart automation, and AI to keep infrastructure lightweight and pass those efficiency benefits directly to local businesses.
           </p>
 
